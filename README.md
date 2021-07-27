@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.com/xyz-fly/HttpJsonLogging.svg?branch=master)](https://travis-ci.com/xyz-fly/HttpJsonLogging)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.xyz-fly/HttpJsonLogging/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.xyz-fly/HttpJsonLogging)
 [![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
-[![MinSdk](https://img.shields.io/badge/%20MinSdk%20-%2016%2B%20-f0ad4e.svg)](https://android-arsenal.com/api?level=21)
+[![MinSdk](https://img.shields.io/badge/%20MinSdk%20-%2021%2B%20-f0ad4e.svg)](https://android-arsenal.com/api?level=21)
 
 # HttpJsonLogging
 A json logging works on okhttp3
