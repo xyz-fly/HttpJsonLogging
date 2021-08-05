@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.com/xyz-fly/HttpJsonLogging.svg?branch=main)](https://travis-ci.com/xyz-fly/HttpJsonLogging)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.xyz-fly/HttpJsonLogging/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.xyz-fly/HttpJsonLogging)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.xyz-fly/httpjsonlogging/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.xyz-fly/httpjsonlogging)
 [![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
 [![MinSdk](https://img.shields.io/badge/%20MinSdk%20-%2021%2B%20-f0ad4e.svg)](https://android-arsenal.com/api?level=21)
 
@@ -10,7 +10,7 @@ A json logging works on okhttp3
 So just add the dependency to your project build.gradle file:
 ```groovy
 dependencies {
-    implementation 'com.github.xyz-fly:HttpJsonLogging:1.0'
+    implementation 'com.github.xyz-fly:httpjsonlogging:1.0'
 }
 ```
 
