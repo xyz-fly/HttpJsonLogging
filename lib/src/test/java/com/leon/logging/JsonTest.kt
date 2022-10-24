@@ -1,30 +1,30 @@
 package com.leon.logging
 
-import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.stream.JsonReader
 import com.google.gson.stream.JsonWriter
-import org.junit.Assert
-import org.junit.Test
 import java.io.StringReader
 import java.io.StringWriter
 import java.util.*
+import org.junit.Assert
+import org.junit.Test
 
 class JsonTest {
 
-    class Person(
+    private class Person(
         val name: String,
         val age: Int,
         val join: Boolean,
         val birthday: Long,
+        val summary: String?
     )
 
-    val Joanna = Person("Joanna", 18, false, Calendar.getInstance().apply { set(2000, 0, 1) }.timeInMillis)
-    val Edward = Person("Edward", 24, false, Calendar.getInstance().apply { set(1998, 10, 11) }.timeInMillis)
-    val Rosie = Person("Rosie", 16, false, Calendar.getInstance().apply { set(2008, 11, 24) }.timeInMillis)
+    private val Joanna = Person("Joanna", 18, false, Calendar.getInstance().apply { set(2000, 0, 1) }.timeInMillis, "something")
+    private val Edward = Person("Edward", 24, false, Calendar.getInstance().apply { set(1998, 10, 11) }.timeInMillis, null)
+    private val Rosie = Person("Rosie", 16, false, Calendar.getInstance().apply { set(2008, 11, 24) }.timeInMillis, null)
 
-    val gson = Gson()
-    val printGson = GsonBuilder().setPrettyPrinting().create()
+    private val gson = GsonBuilder().serializeNulls().create()
+    private val printGson = GsonBuilder().setPrettyPrinting().serializeNulls().create()
 
     @Test
     fun jsonObject() {

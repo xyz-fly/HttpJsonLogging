@@ -1,7 +1,7 @@
 package com.leon.logging
 
-import okio.Buffer
 import java.io.EOFException
+import okio.Buffer
 
 internal fun Buffer.isProbablyUtf8(): Boolean {
     try {

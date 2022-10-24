@@ -1,9 +1,13 @@
 package com.leon.logging
 
-import androidx.annotation.VisibleForTesting
 import com.google.gson.stream.JsonReader
 import com.google.gson.stream.JsonToken
 import com.google.gson.stream.JsonWriter
+import java.io.IOException
+import java.io.StringReader
+import java.io.StringWriter
+import java.nio.charset.Charset
+import java.nio.charset.StandardCharsets
 import okhttp3.Headers
 import okhttp3.Interceptor
 import okhttp3.Response
@@ -11,11 +15,6 @@ import okhttp3.internal.http.promisesBody
 import okhttp3.internal.platform.Platform
 import okio.Buffer
 import okio.GzipSource
-import java.io.IOException
-import java.io.StringReader
-import java.io.StringWriter
-import java.nio.charset.Charset
-import java.nio.charset.StandardCharsets
 
 class HttpJsonLoggingInterceptor constructor(
     private val logger: Logger = Logger.DEFAULT
@@ -97,7 +96,6 @@ class HttpJsonLoggingInterceptor constructor(
     }
 
     @Throws(IOException::class)
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
     fun logJson(reader: JsonReader, writer: JsonWriter) {
         while (reader.hasNext()) {
             when (reader.peek()) {
@@ -133,6 +131,10 @@ class HttpJsonLoggingInterceptor constructor(
                 }
                 JsonToken.BOOLEAN -> {
                     writer.value(reader.nextBoolean())
+                }
+                JsonToken.NULL -> {
+                    reader.nextNull()
+                    writer.nullValue()
                 }
                 else -> {
                 }

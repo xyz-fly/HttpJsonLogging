@@ -1,0 +1,45 @@
+[versions]
+minSdk = "21"
+compileSdk = "33"
+targetSdk = "29"
+
+androidGradlePlugin = "7.3.1"
+
+kotlin = "1.7.20"
+coroutines = "1.6.4"
+
+ktlint = "0.45.2"
+
+spotless = "6.7.2"
+mavenPublish = "0.22.0"
+dokka = "1.6.0"
+
+gson = "2.9.1"
+okhttp3 = "4.10.0"
+
+# Test
+junit4 = '4.13.2'
+
+[libraries]
+# android gradle
+android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "androidGradlePlugin" }
+dokka-plugin = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version.ref = "dokka" }
+
+# kotlin
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib-jdk7", version.ref = "kotlin" }
+kotlin-test = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin" }
+
+# 3rd tool lib
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+okhttp3-core = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp3" }
+
+# test
+junit = { module = "junit:junit", version.ref = "junit4" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
+mavenPublish = { id = "com.vanniktech.maven.publish", version.ref = "mavenPublish" }
+
