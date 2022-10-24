@@ -10,7 +10,7 @@ A json logging works on okhttp3
 So just add the dependency to your project build.gradle file:
 ```groovy
 dependencies {
-    implementation 'com.github.xyz-fly:httpjsonlogging:1.0'
+    implementation 'com.github.xyz-fly:httpjsonlogging:1.1'
 }
 ```
 
